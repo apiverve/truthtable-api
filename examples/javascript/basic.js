@@ -13,12 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/truthtable';
  */
 async function callTruthTableGeneratorAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            expression: &#x27;A AND B OR C&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
