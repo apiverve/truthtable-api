@@ -1767,8 +1767,9 @@ from apiverve_truthtablegenerator.apiClient import TruthtableAPIClient
 
 api = TruthtableAPIClient("[YOUR_API_KEY]")
 
+query = { "expression": "A AND B OR C" }
+
 try:
-    query = { "expression": "A AND B OR C" }
     result = api.execute(query)
     print(result)
 finally:
