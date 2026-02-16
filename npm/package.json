@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/truthtable",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Truth Table Generator creates complete truth tables for boolean expressions with support for AND, OR, NOT, XOR, NAND, and NOR operators.",
   "main": "index.js",
   "types": "index.d.ts",
