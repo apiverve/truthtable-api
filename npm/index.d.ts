@@ -4,37 +4,49 @@ declare module '@apiverve/truthtable' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface truthtableResponse {
     status: string;
     error: string | null;
     data: TruthTableGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface TruthTableGeneratorData {
-      expression:    string;
-      normalized:    string;
-      variables:     string[];
-      variableCount: number;
-      rowCount:      number;
+      expression:    null | string;
+      normalized:    null | string;
+      variables:     (null | string)[];
+      variableCount: number | null;
+      rowCount:      number | null;
       rows:          Row[];
-      asciiTable:    string;
+      asciiTable:    null | string;
   }
   
   interface Row {
       inputs: Inputs;
-      result: number;
+      result: number | null;
   }
   
   interface Inputs {
-      a: number;
-      b: number;
-      c: number;
-      d: number;
-      n: number;
-      o: number;
-      r: number;
+      a: number | null;
+      b: number | null;
+      c: number | null;
+      d: number | null;
+      n: number | null;
+      o: number | null;
+      r: number | null;
   }
 
   export default class truthtableWrapper {
