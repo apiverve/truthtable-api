@@ -25,6 +25,9 @@ namespace APIVerve.API.TruthTableGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,10 +42,10 @@ namespace APIVerve.API.TruthTableGenerator
         public string[] Variables { get; set; }
 
         [JsonProperty("variableCount")]
-        public long VariableCount { get; set; }
+        public long? VariableCount { get; set; }
 
         [JsonProperty("rowCount")]
-        public long RowCount { get; set; }
+        public long? RowCount { get; set; }
 
         [JsonProperty("rows")]
         public Row[] Rows { get; set; }
@@ -57,30 +60,42 @@ namespace APIVerve.API.TruthTableGenerator
         public Inputs Inputs { get; set; }
 
         [JsonProperty("result")]
-        public long Result { get; set; }
+        public long? Result { get; set; }
     }
 
     public partial class Inputs
     {
         [JsonProperty("A")]
-        public long A { get; set; }
+        public long? A { get; set; }
 
         [JsonProperty("B")]
-        public long B { get; set; }
+        public long? B { get; set; }
 
         [JsonProperty("C")]
-        public long C { get; set; }
+        public long? C { get; set; }
 
         [JsonProperty("D")]
-        public long D { get; set; }
+        public long? D { get; set; }
 
         [JsonProperty("N")]
-        public long N { get; set; }
+        public long? N { get; set; }
 
         [JsonProperty("O")]
-        public long O { get; set; }
+        public long? O { get; set; }
 
         [JsonProperty("R")]
-        public long R { get; set; }
+        public long? R { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
