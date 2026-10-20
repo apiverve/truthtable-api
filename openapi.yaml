@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/truthtable:
     get:
-      summary: Generate Truth Table
+      summary: Truth Table Generator
       description: Generate a truth table for a boolean expression
       operationId: truthtable
       parameters:

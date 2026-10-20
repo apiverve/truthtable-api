@@ -1,13 +1,13 @@
-# [Truth Table Generator API](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Truth Table Generator API](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Truth Table Generator creates complete truth tables for boolean expressions with support for AND, OR, NOT, XOR, NAND, and NOR operators.
 
 The Truth Table Generator API provides a simple, reliable way to integrate truth table generator functionality into your applications. Built for developers who need production-ready truth table generator capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/truthtable-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Truth Table Generator API](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Truth Table Generator API](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/truthtable](https://docs.apiverve.com/ref/truthtable)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,1579 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Truth Table Generator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "expression": "A AND B OR C",
+    "normalized": "A && B || C",
+    "variables": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "N",
+      "O",
+      "R"
+    ],
+    "variableCount": 7,
+    "rowCount": 128,
+    "rows": [
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 0
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 0,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 0,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 0,
+          "R": 1
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 0
+        },
+        "result": 1
+      },
+      {
+        "inputs": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "N": 1,
+          "O": 1,
+          "R": 1
+        },
+        "result": 1
+      }
+    ],
+    "asciiTable": "| A        | B        | C        | D        | N        | O        | R        | Result   |\n|----------|----------|----------|----------|----------|----------|----------|----------|\n| 0        | 0        | 0        | 0        | 0        | 0        | 0        | 0        |\n| 0        | 0        | 0        | 0        | 0        | 0        | 1        | 0        |\n| 0        | 0        | 0        | 0        | 0        | 1        | 0        | 0        |\n| 0        | 0        | 0        | 0        | 0        | 1        | 1        | 0        |\n| 0        | 0        | 0        | 0        | 1        | 0        | 0        | 0        |\n| 0        | 0        | 0        | 0        | 1        | 0        | 1        | 0        |\n| 0        | 0        | 0        | 0        | 1        | 1        | 0        | 0        |\n| 0        | 0        | 0        | 0        | 1        | 1        | 1        | 0        |\n| 0        | 0        | 0        | 1        | 0        | 0        | 0        | 0        |\n| 0        | 0        | 0        | 1        | 0        | 0        | 1        | 0        |\n| 0        | 0        | 0        | 1        | 0        | 1        | 0        | 0        |\n| 0        | 0        | 0        | 1        | 0        | 1        | 1        | 0        |\n| 0        | 0        | 0        | 1        | 1        | 0        | 0        | 0        |\n| 0        | 0        | 0        | 1        | 1        | 0        | 1        | 0        |\n| 0        | 0        | 0        | 1        | 1        | 1        | 0        | 0        |\n| 0        | 0        | 0        | 1        | 1        | 1        | 1        | 0        |\n| 0        | 0        | 1        | 0        | 0        | 0        | 0        | 1        |\n| 0        | 0        | 1        | 0        | 0        | 0        | 1        | 1        |\n| 0        | 0        | 1        | 0        | 0        | 1        | 0        | 1        |\n| 0        | 0        | 1        | 0        | 0        | 1        | 1        | 1        |\n| 0        | 0        | 1        | 0        | 1        | 0        | 0        | 1        |\n| 0        | 0        | 1        | 0        | 1        | 0        | 1        | 1        |\n| 0        | 0        | 1        | 0        | 1        | 1        | 0        | 1        |\n| 0        | 0        | 1        | 0        | 1        | 1        | 1        | 1        |\n| 0        | 0        | 1        | 1        | 0        | 0        | 0        | 1        |\n| 0        | 0        | 1        | 1        | 0        | 0        | 1        | 1        |\n| 0        | 0        | 1        | 1        | 0        | 1        | 0        | 1        |\n| 0        | 0        | 1        | 1        | 0        | 1        | 1        | 1        |\n| 0        | 0        | 1        | 1        | 1        | 0        | 0        | 1        |\n| 0        | 0        | 1        | 1        | 1        | 0        | 1        | 1        |\n| 0        | 0        | 1        | 1        | 1        | 1        | 0        | 1        |\n| 0        | 0        | 1        | 1        | 1        | 1        | 1        | 1        |\n| 0        | 1        | 0        | 0        | 0        | 0        | 0        | 0        |\n| 0        | 1        | 0        | 0        | 0        | 0        | 1        | 0        |\n| 0        | 1        | 0        | 0        | 0        | 1        | 0        | 0        |\n| 0        | 1        | 0        | 0        | 0        | 1        | 1        | 0        |\n| 0        | 1        | 0        | 0        | 1        | 0        | 0        | 0        |\n| 0        | 1        | 0        | 0        | 1        | 0        | 1        | 0        |\n| 0        | 1        | 0        | 0        | 1        | 1        | 0        | 0        |\n| 0        | 1        | 0        | 0        | 1        | 1        | 1        | 0        |\n| 0        | 1        | 0        | 1        | 0        | 0        | 0        | 0        |\n| 0        | 1        | 0        | 1        | 0        | 0        | 1        | 0        |\n| 0        | 1        | 0        | 1        | 0        | 1        | 0        | 0        |\n| 0        | 1        | 0        | 1        | 0        | 1        | 1        | 0        |\n| 0        | 1        | 0        | 1        | 1        | 0        | 0        | 0        |\n| 0        | 1        | 0        | 1        | 1        | 0        | 1        | 0        |\n| 0        | 1        | 0        | 1        | 1        | 1        | 0        | 0        |\n| 0        | 1        | 0        | 1        | 1        | 1        | 1        | 0        |\n| 0        | 1        | 1        | 0        | 0        | 0        | 0        | 1        |\n| 0        | 1        | 1        | 0        | 0        | 0        | 1        | 1        |\n| 0        | 1        | 1        | 0        | 0        | 1        | 0        | 1        |\n| 0        | 1        | 1        | 0        | 0        | 1        | 1        | 1        |\n| 0        | 1        | 1        | 0        | 1        | 0        | 0        | 1        |\n| 0        | 1        | 1        | 0        | 1        | 0        | 1        | 1        |\n| 0        | 1        | 1        | 0        | 1        | 1        | 0        | 1        |\n| 0        | 1        | 1        | 0        | 1        | 1        | 1        | 1        |\n| 0        | 1        | 1        | 1        | 0        | 0        | 0        | 1        |\n| 0        | 1        | 1        | 1        | 0        | 0        | 1        | 1        |\n| 0        | 1        | 1        | 1        | 0        | 1        | 0        | 1        |\n| 0        | 1        | 1        | 1        | 0        | 1        | 1        | 1        |\n| 0        | 1        | 1        | 1        | 1        | 0        | 0        | 1        |\n| 0        | 1        | 1        | 1        | 1        | 0        | 1        | 1        |\n| 0        | 1        | 1        | 1        | 1        | 1        | 0        | 1        |\n| 0        | 1        | 1        | 1        | 1        | 1        | 1        | 1        |\n| 1        | 0        | 0        | 0        | 0        | 0        | 0        | 0        |\n| 1        | 0        | 0        | 0        | 0        | 0        | 1        | 0        |\n| 1        | 0        | 0        | 0        | 0        | 1        | 0        | 0        |\n| 1        | 0        | 0        | 0        | 0        | 1        | 1        | 0        |\n| 1        | 0        | 0        | 0        | 1        | 0        | 0        | 0        |\n| 1        | 0        | 0        | 0        | 1        | 0        | 1        | 0        |\n| 1        | 0        | 0        | 0        | 1        | 1        | 0        | 0        |\n| 1        | 0        | 0        | 0        | 1        | 1        | 1        | 0        |\n| 1        | 0        | 0        | 1        | 0        | 0        | 0        | 0        |\n| 1        | 0        | 0        | 1        | 0        | 0        | 1        | 0        |\n| 1        | 0        | 0        | 1        | 0        | 1        | 0        | 0        |\n| 1        | 0        | 0        | 1        | 0        | 1        | 1        | 0        |\n| 1        | 0        | 0        | 1        | 1        | 0        | 0        | 0        |\n| 1        | 0        | 0        | 1        | 1        | 0        | 1        | 0        |\n| 1        | 0        | 0        | 1        | 1        | 1        | 0        | 0        |\n| 1        | 0        | 0        | 1        | 1        | 1        | 1        | 0        |\n| 1        | 0        | 1        | 0        | 0        | 0        | 0        | 1        |\n| 1        | 0        | 1        | 0        | 0        | 0        | 1        | 1        |\n| 1        | 0        | 1        | 0        | 0        | 1        | 0        | 1        |\n| 1        | 0        | 1        | 0        | 0        | 1        | 1        | 1        |\n| 1        | 0        | 1        | 0        | 1        | 0        | 0        | 1        |\n| 1        | 0        | 1        | 0        | 1        | 0        | 1        | 1        |\n| 1        | 0        | 1        | 0        | 1        | 1        | 0        | 1        |\n| 1        | 0        | 1        | 0        | 1        | 1        | 1        | 1        |\n| 1        | 0        | 1        | 1        | 0        | 0        | 0        | 1        |\n| 1        | 0        | 1        | 1        | 0        | 0        | 1        | 1        |\n| 1        | 0        | 1        | 1        | 0        | 1        | 0        | 1        |\n| 1        | 0        | 1        | 1        | 0        | 1        | 1        | 1        |\n| 1        | 0        | 1        | 1        | 1        | 0        | 0        | 1        |\n| 1        | 0        | 1        | 1        | 1        | 0        | 1        | 1        |\n| 1        | 0        | 1        | 1        | 1        | 1        | 0        | 1        |\n| 1        | 0        | 1        | 1        | 1        | 1        | 1        | 1        |\n| 1        | 1        | 0        | 0        | 0        | 0        | 0        | 1        |\n| 1        | 1        | 0        | 0        | 0        | 0        | 1        | 1        |\n| 1        | 1        | 0        | 0        | 0        | 1        | 0        | 1        |\n| 1        | 1        | 0        | 0        | 0        | 1        | 1        | 1        |\n| 1        | 1        | 0        | 0        | 1        | 0        | 0        | 1        |\n| 1        | 1        | 0        | 0        | 1        | 0        | 1        | 1        |\n| 1        | 1        | 0        | 0        | 1        | 1        | 0        | 1        |\n| 1        | 1        | 0        | 0        | 1        | 1        | 1        | 1        |\n| 1        | 1        | 0        | 1        | 0        | 0        | 0        | 1        |\n| 1        | 1        | 0        | 1        | 0        | 0        | 1        | 1        |\n| 1        | 1        | 0        | 1        | 0        | 1        | 0        | 1        |\n| 1        | 1        | 0        | 1        | 0        | 1        | 1        | 1        |\n| 1        | 1        | 0        | 1        | 1        | 0        | 0        | 1        |\n| 1        | 1        | 0        | 1        | 1        | 0        | 1        | 1        |\n| 1        | 1        | 0        | 1        | 1        | 1        | 0        | 1        |\n| 1        | 1        | 0        | 1        | 1        | 1        | 1        | 1        |\n| 1        | 1        | 1        | 0        | 0        | 0        | 0        | 1        |\n| 1        | 1        | 1        | 0        | 0        | 0        | 1        | 1        |\n| 1        | 1        | 1        | 0        | 0        | 1        | 0        | 1        |\n| 1        | 1        | 1        | 0        | 0        | 1        | 1        | 1        |\n| 1        | 1        | 1        | 0        | 1        | 0        | 0        | 1        |\n| 1        | 1        | 1        | 0        | 1        | 0        | 1        | 1        |\n| 1        | 1        | 1        | 0        | 1        | 1        | 0        | 1        |\n| 1        | 1        | 1        | 0        | 1        | 1        | 1        | 1        |\n| 1        | 1        | 1        | 1        | 0        | 0        | 0        | 1        |\n| 1        | 1        | 1        | 1        | 0        | 0        | 1        | 1        |\n| 1        | 1        | 1        | 1        | 0        | 1        | 0        | 1        |\n| 1        | 1        | 1        | 1        | 0        | 1        | 1        | 1        |\n| 1        | 1        | 1        | 1        | 1        | 0        | 0        | 1        |\n| 1        | 1        | 1        | 1        | 1        | 0        | 1        | 1        |\n| 1        | 1        | 1        | 1        | 1        | 1        | 0        | 1        |\n| 1        | 1        | 1        | 1        | 1        | 1        | 1        | 1        |\n"
+  }
 }
 ```
 
@@ -203,7 +1771,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Truth Table Generator API](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Truth Table Generator API](https://apiverve.com/marketplace/truthtable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
